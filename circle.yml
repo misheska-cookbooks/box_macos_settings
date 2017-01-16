@@ -1,6 +1,6 @@
 machine:
   environment:
-    KITCHEN_LOCAL_YAML: .kitchen.docker.yml
+    KITCHEN_LOCAL_YAML: .kitchen.circle.yml
   services:
     - docker
 
