@@ -14,12 +14,12 @@ module BoxMacosSettingsCookbook
           command 'launchctl load -w /System/Library/LaunchDaemons/com.apple.screensharing.plist'
           only_if { screen_sharing_changed? }
         end
-     else
+      else
         execute "#{new_resource.setting} screen sharing" do
           command 'launchctl unload -w /System/Library/LaunchDaemons/com.apple.screensharing.plist'
           only_if { screen_sharing_changed? }
         end
-     end
+      end
     end
 
     include BoxMacosSettingsCookbook::BoxMacosScreenSharingHelper

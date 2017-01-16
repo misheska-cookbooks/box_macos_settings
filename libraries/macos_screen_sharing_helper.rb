@@ -9,7 +9,7 @@ module BoxMacosSettingsCookbook
     def current_screen_sharing
       @current_screen_sharing ||= begin
         screensharing = shell_out('launchctl list com.apple.screensharing')
-        screensharing.exitstatus == 0
+        screensharing.exitstatus.zero?
       end
     end
 
