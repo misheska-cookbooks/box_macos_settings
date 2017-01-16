@@ -13,8 +13,12 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: macos
+    driver:
+      box: macos1012
+      box_url: file:///Users/misheska/box/macos1012-vbox5.1.8-0.1.10.box
+      vm_hostname: false
+      cache_directory: false
 
 suites:
   - name: default
@@ -23,4 +27,28 @@ suites:
     verifier:
       inspec_tests:
         - test/smoke/default
+    attributes:
+
+  - name: non-default
+    run_list:
+      - recipe[box_macos_settings_test::non_default]
+    verifier:
+      inspec_tests:
+        - test/smoke/non-default
+    attributes:
+
+  - name: macos-hostname-multi
+    run_list:
+      - recipe[box_macos_settings_test::macos_hostname_multi]
+    verifier:
+      inspec_tests:
+        - test/smoke/macos-hostname-multi
+    attributes:
+
+  - name: macos-hostname
+    run_list:
+      - recipe[box_macos_settings_test::macos_hostname]
+    verifier:
+      inspec_tests:
+        - test/smoke/macos-hostname
     attributes:
