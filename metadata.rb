@@ -1,6 +1,6 @@
 name 'box_macos_settings'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Mischa Taylor'
+maintainer_email 'mischa@misheska.com'
 license 'Apache 2.0'
 description 'Installs/Configures box_macos_settings'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
