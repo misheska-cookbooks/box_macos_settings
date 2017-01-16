@@ -90,6 +90,7 @@ macos_hostname 'misheska' do
   computer_name "Mischa's MacBook"
   action :set
 end
+```
 
 ## macos_remote_login
 
