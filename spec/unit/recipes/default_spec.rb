@@ -8,7 +8,7 @@
 require 'spec_helper'
 
 describe 'box_macos_settings::default' do
-  context 'When all attributes are default, on an unspecified platform' do
+  context 'When all attributes are default, on macOS' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(
         platform: 'mac_os_x',
