@@ -1,4 +1,5 @@
 # box_macos_settings
+[![CircleCI](https://circleci.com/gh/misheska-cookbooks/box_macos_settings.svg?style=svg)](https://circleci.com/gh/misheska-cookbooks/box_macos_settings)
 
 Captures a number of commonly used ways of configuring macOS system settings
 as library resources.
